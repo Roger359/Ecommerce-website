@@ -239,7 +239,7 @@ REUSABLE SELECTOR
   transition: var(--trans-color);
 }
 
-.mini-text{
+.mini-text {
   font-size: var(--font-smaller);
   color: var(--light-text-color);
 }
@@ -286,11 +286,9 @@ Structure Styling
 15.RESPONSIVE
 */
 
-
-
 /* 01.HEADER */
 
-header li > a {
+:where(.off-canvas, header) li > a {
   display: flex;
   position: relative;
   line-height: inherit;
@@ -452,7 +450,7 @@ nav .fly-item {
   z-index: 10;
 }
 
-.dpt-cat .dpt-head{
+.dpt-cat .dpt-head {
   position: relative;
   width: 300px;
   padding: 0.75em 1.5em;
@@ -462,12 +460,11 @@ nav .fly-item {
   margin-bottom: -2.15em;
 }
 
-.dpt-cat .dpt-head .mini-text{
+.dpt-cat .dpt-head .mini-text {
   color: var(--light-bg-color);
-
 }
 
-.dpt-cat .dpt-trigger{
+.dpt-cat .dpt-trigger {
   position: absolute;
   right: 0;
   top: 0;
@@ -485,7 +482,7 @@ nav .fly-item {
   display: block;
 }
 
-.dpt-menu .has-child li a:hover{
+.dpt-menu .has-child li a:hover {
   text-decoration: underline;
 }
 
@@ -493,16 +490,15 @@ nav .fly-item {
     d. Search form
 */
 
-.header-main .right{
+.header-main .right {
   flex: 1;
 }
 
-form{
+form {
   position: relative;
-
 }
 
-form.search input{
+form.search input {
   line-height: 3.25em;
   padding: 0 7em 0 4.5em;
   border: 0;
@@ -513,7 +509,7 @@ form.search input{
   font-weight: var(--fw3);
 }
 
-form.search :where(span,button){
+form.search :where(span, button) {
   position: absolute;
   top: 0;
   padding: 0.55em 1.5em;
@@ -522,7 +518,7 @@ form.search :where(span,button){
   height: var(--percent100);
 }
 
-form.search button{
+form.search button {
   right: 0;
   border: 0;
   outline: 0;
@@ -533,17 +529,83 @@ form.search button{
   border-radius: 0 7px 7px 0;
   cursor: pointer;
   transition: var(--trans-background);
-
 }
 
-form.search button:hover{
+form.search button:hover {
   background-color: var(--dark-color);
+}
+
+/* 01. HEADER
+    e. Responsive MENU - Off Canvas
+*/
+
+.site-off {
+  position: fixed;
+  width: 320px;
+  height: var(--percent100);
+  background-color: var(--white-color);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.off-canvas {
+  width: var(--percent100);
+  height: var(--percent100);
+  touch-action: auto;
+  padding: 1.5em;
+}
+
+.off-canvas .canvas-head {
+  color: var(--white-color);
+  justify-content: space-between;
+  padding: 1.5em;
+  margin: -1.5em -1.5em 1.5em;
+  background-color: var(--secondary-dark-color);
+  border-bottom-right-radius: 160px 25px;
+}
+
+.off-canvas .canvas-head .logo {
+  z-index: 10;
+  position: relative;
+}
+
+.off-canvas .canvas-head .logo .circle{
+  opacity: .75;
+
+}
+.t-close{
+  font-size: 1.25em;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--percent50);
+  background-color: var(--secondary-dark-color);
+  color: var(--white-color);
+  transition: var(--trans-background-color);
+
 
 }
 
+.t-close:hover{
+  background-color: var(--white-color);
+  color: var(--secondary-dark-color);
+  opacity: .75;
+}
 
+.off-canvas .dpt-head{
+  font-size: var(--font-small);
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: var(--light-bg-color);
+  border-radius: 7px 7px 0 0;  
+}
 
-
+.off-canvas .has-child > :where(ul, .mega){
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  line-height: 28px;
+  padding-left: 3em;
+}
 
 /* 15.RESPONSIVE */
 
@@ -651,13 +713,13 @@ form.search button:hover{
     color: var(--secondary-dark-color);
   }
 
-  .header-main .right{
+  .header-main .right {
     max-width: 680px;
     margin: auto;
   }
 
   /* Departments menu */
-  .dpt-menu{
+  .dpt-menu {
     position: absolute;
     top: var(--percent100);
     width: 300px;
@@ -673,7 +735,8 @@ form.search button:hover{
     border-bottom: 1px solid var(--border-color);
   }
 
-  .dpt-menu .has-child > ul, .dpt-menu .mega{
+  .dpt-menu .has-child > ul,
+  .dpt-menu .mega {
     position: absolute;
     top: 0;
     left: var(--percent100);
@@ -709,24 +772,26 @@ form.search button:hover{
     background-image: url(assets/menu/menu_bg4.jpg);
   }
 
-  .dpt-menu .has-child > :where(ul,.mega)::before{
-    content: '';
+  .dpt-menu .has-child > :where(ul, .mega)::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(98deg, rgba(255,255,255,1)0%, rgba(255,255,255,0.1));
+    background: linear-gradient(
+      98deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.1)
+    );
   }
 
   .dpt-menu .mega {
     width: auto;
     min-width: var(--percent100);
-
   }
 
-  .dpt-menu .has-child:hover .mega{
+  .dpt-menu .has-child:hover .mega {
     display: flex;
   }
-
 }
