@@ -550,6 +550,16 @@ form.search button:hover {
   background-color: var(--white-color);
   overflow-y: auto;
   z-index: 1000;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform .4s, visibility .4s;
+  will-change: transform, visibility;
+}
+
+.showmenu .site-off{
+  transform: translateX(0);
+  visibility: visible;
+  transform: transform .4s 0s, visibility 0s 0s;
 }
 
 .off-canvas {
@@ -624,6 +634,10 @@ form.search button:hover {
   margin: 1.25em;
   border-top: 1px solid var(--border-color);
 }
+.off-canvas .expand > :where(ul, .mega){
+  max-height: 2000px;
+}
+
 
 .off-canvas nav .mega{
   padding: 0;
