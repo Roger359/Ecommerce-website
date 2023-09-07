@@ -1,7 +1,7 @@
 // toggle menu variables
-const menuButton = document.querySelector('.trigger'),
-closeButton = document.querySelector('.t-close'),
-addclass = document.querySelector('.site')
+const menuButton = document.querySelector(".trigger"),
+  closeButton = document.querySelector(".t-close"),
+  addclass = document.querySelector(".site");
 
 // copy menu for mobile
 
@@ -24,15 +24,14 @@ function copyMenu() {
 }
 copyMenu();
 
-
 // show mobile menu
-menuButton.addEventListener('click', function(){
-    addclass.classList.toggle('showmenu')
-})
+menuButton.addEventListener("click", function () {
+  addclass.classList.toggle("showmenu");
+});
 
-closeButton.addEventListener('click', function(){
-    addclass.classList.remove('showmenu')
-})
+closeButton.addEventListener("click", function () {
+  addclass.classList.remove("showmenu");
+});
 
 //show sub menu on mobile
 const submenu = document.querySelectorAll(".has-child .icon-small");
@@ -40,15 +39,24 @@ const submenu = document.querySelectorAll(".has-child .icon-small");
 submenu.forEach((menu) => menu.addEventListener("click", toggle));
 
 // Why the function dont execute like a expresive function
-function toggle(e){
+function toggle(e) {
   e.preventDefault();
 
-  // TODO need help to understand this 
+  // TODO need help to understand this
   submenu.forEach((item) =>
     item != this ? item.closest(".has-child").classList.remove("expand") : null
   );
-  
+
   if (this.closest(".has-child").classList != "expand");
   this.closest(".has-child").classList.toggle("expand");
-};
+}
 
+// slider swiper initial
+const swiper = new Swiper(".swiper", {
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
