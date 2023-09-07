@@ -677,9 +677,7 @@ line-height: 16px;
 margin: 0 0.5em 0.5em 0;
 }
 
-/* SLIDER */
-
-
+/* 02.SLIDER */
 
 .slider .item {
   position: relative;
@@ -731,7 +729,22 @@ margin: 0 0.5em 0.5em 0;
   background-color: var(--secondary-dark-color);
 }
 
+/* 03. BRANDS */
 
+.brands .wrapper {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+
+.brands .item img{
+  opacity: .25;
+  transition: opacity .3s;
+}
+
+.brands .item a:hover img {
+  opacity: 1;
+}
 
 /* 15.RESPONSIVE */
 
