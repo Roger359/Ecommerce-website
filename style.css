@@ -1059,7 +1059,7 @@ form.search button:hover {
     font-size: 1.25em;
   }
   .products.mini{
-    flex: 0 0 58%;
+    flex: 0 0 50%;
   }
 
   .products.main .item{
