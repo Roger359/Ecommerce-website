@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;800&display=swap");
-/* 
-Fonts:
-- Fira+Sans: 300,400,700
-- Oswald: 400, 500, 600, 700
-- Poppins: 300, 400,700
-*/
+
+/*------------------------------- 
+ * Fonts:
+ * - Fira+Sans: 300,400,700
+ * - Oswald: 400, 500, 600, 700
+ * - Poppins: 300, 400,700
+ *------------------------------*/
 
 :root {
   --primary-color: #ff6b6b;
@@ -109,9 +110,9 @@ h4 {
   font-weight: var(--fw6);
 }
 
-/* 
-REUSABLE SELECTOR
-*/
+/* ------------------
+ * 00.REUSABLE SELECTOR
+ * -----------------*/
 
 .container {
   max-width: 1280px;
@@ -244,49 +245,50 @@ REUSABLE SELECTOR
   color: var(--light-text-color);
 }
 
-/* 
-Structure Styling
-
-00. reusable selectors
-
-01. HEADER
-    a. Header top
-    b. Header Nav
-    c. Header Main. departments category
-    d. Search Form
-    e. Responsive MENU - Off Canvas
-02.SLIDER
-03.Brands
-04.Product
-    a. Global Product
-    b. BIG Product
-    c. Mini product
-    d. Main Product
-05.Banner
-    a. News Letter
-    b. Widgets
-    c. Footer Info
-06. Bottom Menu
+/* ----------------- 
+ * Structure Styling
+ * -----------------
+ * 00.REUSABLE SELECTORS
+ * 01.HEADER
+    a.Header top
+    b.Header Nav
+    c.Header Main. departments category
+    d.Search Form
+    e.Responsive MENU - Off Canvas
+ * 02.SLIDER
+ * 03.Brands
+ * 04.Product
+    a.Global Product
+    b.BIG Product
+    c.Mini product
+    d.Main Product
+ * 05.Banner
+    a.News Letter
+    b.Widgets
+    c.Footer Info
+ * 06.Bottom Menu
     a.Search
-07.Overlay
-08.Page Single
+ * 07.Overlay
+ * 08.Page Single
     a.Breadcrumb
     b.Product details
     c.Product description
     d.Product Review
     e.Product Review form
-09.Page Single: SPECIAL OFFER
-10. PAGE CATEGORY
-    a. Sidebar products filter
-    b. products block
-11. CART
-12.PAGE CART
-13.PAGE CHECKOUT
-14.MODAL
-15.RESPONSIVE
-*/
+ * 09.Page Single: SPECIAL OFFER
+ * 10.PAGE CATEGORY
+    a.Sidebar products filter
+    b.products block
+ * 11.CART
+ * 12.PAGE CART
+ * 13.PAGE CHECKOUT
+ * 14.MODAL
+ * 15.RESPONSIVE
+ *---------------------------*/
 
-/* 01.HEADER */
+/*----------- 
+ * 01.HEADER 
+ *-----------/
 
 :where(.off-canvas, header) li > a {
   display: flex;
@@ -295,9 +297,10 @@ Structure Styling
   transition: var(--trans-color);
 }
 
-/* 01.HEADER
-    a.Header Top
-*/
+/*-------------- 
+ * 01.HEADER
+ *  a.Header Top
+ *-------------*/
 
 .header-top .wrapper {
   font-size: var(--font-small);
@@ -336,9 +339,10 @@ Structure Styling
   display: block;
 }
 
-/* 01.HEADER
-    b.Header Nav
-*/
+/*--------------
+ * 01.HEADER
+ *  b.Header Nav
+ *--------------*/
 
 .header-nav {
   padding: 0.5em 0;
@@ -435,9 +439,10 @@ nav .fly-item {
   z-index: 1;
 }
 
-/* 01. HEADER 
-*    c.Header Main, Departaments Category
-*/
+/*-------------------
+ * 01.HEADER 
+ *  c.Header Main, Departaments Category
+ * -----------------*/
 
 .header-main {
   background-color: var(--secondary-dark-color);
@@ -486,9 +491,10 @@ nav .fly-item {
   text-decoration: underline;
 }
 
-/* HEADER
-    d. Search form
-*/
+/*---------------
+ * 01.HEADER
+ *  d. Search form
+ *-----------------*/
 
 .header-main .right {
   flex: 1;
@@ -535,9 +541,10 @@ form.search button:hover {
   background-color: var(--dark-color);
 }
 
-/* 01. HEADER
-    e. Responsive MENU - Off Canvas
-*/
+/* --------------
+ * 01. HEADER
+ *  e. Responsive MENU - Off Canvas
+ *----------------------------------*/
 
 .site-off {
   position: fixed;
@@ -674,7 +681,9 @@ form.search button:hover {
   margin: 0 0.5em 0.5em 0;
 }
 
-/* 02.SLIDER */
+/*------------
+ * 02.SLIDER 
+ * ------------*/
 
 .slider .item {
   position: relative;
@@ -713,7 +722,7 @@ form.search button:hover {
 
 .text-content :where(h2, h3) span:first-child {
   font-weight: var(--fw3);
-  columns: var(--light-text-color);
+  color: var(--light-text-color);
 }
 
 .text-content :where(h2, h3) span:last-child {
@@ -726,7 +735,9 @@ form.search button:hover {
   background-color: var(--secondary-dark-color);
 }
 
-/* 03. BRANDS */
+/*--------------
+ * 03. BRANDS 
+ *--------------*/
 
 .brands .wrapper {
   justify-content: space-between;
@@ -743,7 +754,9 @@ form.search button:hover {
   opacity: 1;
 }
 
-/* 04. Product Block Style */
+/*--------------
+ * 04.Product Block Style 
+ *-------------------------*/
 
 .sectop {
   justify-content: space-between;
@@ -765,9 +778,10 @@ form.search button:hover {
   top: -5px;
 }
 
-/* 04.Product --------------------------
-    a. Global Product
-  */
+/*----------------
+ * 04.Product 
+ *  a.Global Product
+ *-----------------*/
 
 .products .offer {
   text-align: center;
@@ -899,7 +913,6 @@ form.search button:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z' fill='rgba(231,196,9,1)'%3E%3C/path%3E%3C/svg%3E");
   background-position-y: top;
   background-repeat-y: no-repeat;
-
 }
 
 /* to set width of stars */
@@ -955,7 +968,7 @@ form.search button:hover {
   position: relative;
 }
 
-.products .stock-danger{
+.products .stock-danger {
   color: var(--primary-color);
 }
 
@@ -965,9 +978,10 @@ form.search button:hover {
   margin-bottom: 2em;
 }
 
-/* 04.Product --------------------------
-    b. BIG Product
-*/
+/* ---------------
+ * 04.Product 
+ *  b. BIG Product
+ * ------------------*/
 
 .products.big .item {
   flex-direction: column;
@@ -978,9 +992,10 @@ form.search button:hover {
   margin: 0 auto;
 }
 
-/* 04.Product --------------------------
-    c. Mini product 
-*/
+/*----------------------
+ * 04.Product 
+ *  c. Mini product 
+ *------------------------*/
 
 .products.mini .item {
   margin-bottom: 2em;
@@ -990,7 +1005,7 @@ form.search button:hover {
   height: 160px;
   margin-right: 1.25em;
 }
-.products.mini .content{
+.products.mini .content {
   margin: 0;
   gap: 0.75em;
 }
@@ -998,12 +1013,12 @@ form.search button:hover {
   font-weight: 400;
 }
 
+/*----------------
+ * 04.Product 
+ *   d. Main Product    
+ *-----------------------*/
 
-/* 04.Product --------------------------
-    d. Main Product    
-*/
-
-.products.main .item{
+.products.main .item {
   flex-direction: column;
   flex: 0 0 100%;
   padding: 0 0.938em;
@@ -1012,23 +1027,26 @@ form.search button:hover {
 
 .products.main .media {
   height: 390px;
-
 }
 
-.products.main .footer{
+.products.main .footer {
   position: absolute;
   left: 0;
   right: 0;
   padding: 0 1em 1em;
   border-radius: 7px;
   z-index: 1;
-  background: linear-gradient(0deg, var(--light-bg-color) 0%, var(--white-color) 70%);
+  background: linear-gradient(
+    0deg,
+    var(--light-bg-color) 0%,
+    var(--white-color) 70%
+  );
   opacity: 0;
   visibility: hidden;
   will-change: opacity;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.products.main .item:hover .footer{
+.products.main .item:hover .footer {
   opacity: 1;
   visibility: visible;
 }
@@ -1041,15 +1059,74 @@ form.search button:hover {
   margin-top: 145px;
 }
 
-.products.main .item:hover .content > *:not(.footer){
+.products.main .item:hover .content > *:not(.footer) {
   z-index: 3;
 }
 
-/* 15.RESPONSIVE */
+/*---------------- 
+ * 05.Banner
+ *---------------*/
 
-@media  screen and (min-width: 481px) {
+.banners .item {
+  position: relative;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+}
 
-  .products.main .item{
+.banner .image {
+  text-align: right;
+}
+
+.banner .get-gray {
+  background-color: var(--border-color);
+}
+
+.banner :where(.text-content, .over-link) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--percent100);
+  height: var(--percent100);
+}
+
+.banner .text-content {
+  padding: 1.5em 2.5em;
+}
+
+.banner h3 {
+  font-size: calc(1em + 0.5vw);
+  font-weight: var(--fw3);
+}
+
+.banner h3 span {
+  font-size: 80%;
+}
+
+.banner .primary-button {
+z-index: 3;
+}
+
+/* --------------------
+ * 05.Banner
+ *  a.News Letter
+ *--------------------*/
+
+/* ----------------
+ * 05.Banner
+ *  b.Widgets
+ * ---------------*/
+
+/* --------------
+ * 05.Banner
+    c.Footer Info     
+ * ------------------*/
+
+/* 15.RESPONSIVE 
+ * 
+ */
+
+@media screen and (min-width: 481px) {
+  .products.main .item {
     flex: 0 0 50%;
   }
 }
@@ -1058,14 +1135,14 @@ form.search button:hover {
   .products .price .current {
     font-size: 1.25em;
   }
-  .products.mini{
-    flex: 0 0 58%;
+  .products.mini,
+  .banner .row {
+    flex: 0 0 50%;
   }
 
-  .products.main .item{
+  .products.main .item {
     flex: 0 0 33.3333%;
   }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -1268,7 +1345,7 @@ form.search button:hover {
     max-height: 373px;
   }
 
-  .products.main .item{
+  .products.main .item {
     flex: 0 0 25%;
   }
 }
