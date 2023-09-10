@@ -1146,6 +1146,55 @@ form.search button:hover {
     width: var(--percent100);
   }
 
+  /* 06.FOOTER
+   * b. widgets
+  */
+
+  .widgets {
+    padding: 3.5em 2.5em;
+    background-color: var(--light-bg-color);
+   } 
+
+   /* 06. FOOTER
+    * c. Info
+    */
+
+    .footer-info {
+      padding: 3.5em 2.5em;
+    }
+    
+    .footer-info .wrapper .flexcol {
+      align-items: center;
+      gap: 0;
+    }
+    
+    .footer-info ul li a {
+      font-size: 1.25em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--light-bg-color);
+      border-radius: var(--percent50);
+      margin: 0.25em;
+      transition: var(--trans-background);
+    }
+    
+    .footer-info ul li a:hover{
+      background-color: var(--border-color);
+    }
+    
+    .footer-info .logo a{
+      margin: 0 0 1em -0.75em;
+    
+    }
+    
+    .footer-info .mini-text{
+      margin-top: 2em;
+      text-align: center;
+      
+    }
 
 /* 15.RESPONSIVE */
 
@@ -1161,7 +1210,8 @@ form.search button:hover {
     font-size: 1.25em;
   }
   .products.mini,
-  .banner .row{
+  .banner .row,
+  .widgets .row{
     flex: 0 0 50%;
   }
 
@@ -1372,7 +1422,8 @@ form.search button:hover {
     max-height: 373px;
   }
 
-  .products.main .item{
+  .products.main .item,
+  .widgets .row{
     flex: 0 0 25%;
   }
 
