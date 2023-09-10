@@ -110,8 +110,8 @@ h4 {
 }
 
 /* 
-REUSABLE SELECTOR
-*/
+ * 00.REUSABLE SELECTORS
+ *----------*/
 
 .container {
   max-width: 1280px;
@@ -244,47 +244,33 @@ REUSABLE SELECTOR
   color: var(--light-text-color);
 }
 
-/* 
-Structure Styling
+/* Structure Styling
 
-00. reusable selectors
+00.REUSABLE SELECTORS
 
-01. HEADER
-    a. Header top
-    b. Header Nav
-    c. Header Main. departments category
-    d. Search Form
-    e. Responsive MENU - Off Canvas
+01.HEADER
+  a.Header top
+  b.Header Nav
+  c.Header Main. departments category
+  d.Search Form
+  e.Responsive MENU - Off Canvas
 02.SLIDER
 03.Brands
 04.Product
-    a. Global Product
-    b. BIG Product
-    c. Mini product
-    d. Main Product
+  a.Global Product
+  b.BIG Product
+  c.Mini product
+  d.Main Product
 05.Banner
-    a. News Letter
-    b. Widgets
-    c. Footer Info
-06. Bottom Menu
-    a.Search
+  a.News Letter
+  b.Widgets
+  c.Footer Info
+06.Bottom Menu
+  a.Search
 07.Overlay
-08.Page Single
-    a.Breadcrumb
-    b.Product details
-    c.Product description
-    d.Product Review
-    e.Product Review form
-09.Page Single: SPECIAL OFFER
-10. PAGE CATEGORY
-    a. Sidebar products filter
-    b. products block
-11. CART
-12.PAGE CART
-13.PAGE CHECKOUT
-14.MODAL
-15.RESPONSIVE
-*/
+08.RESPONSIVE
+
+*-------------------------*/
 
 /* 01.HEADER */
 
@@ -296,8 +282,8 @@ Structure Styling
 }
 
 /* 01.HEADER
-    a.Header Top
-*/
+ *  a.Header Top
+ *------------*/
 
 .header-top .wrapper {
   font-size: var(--font-small);
@@ -337,8 +323,8 @@ Structure Styling
 }
 
 /* 01.HEADER
-    b.Header Nav
-*/
+ *  b.Header Nav
+ *-----------------*/
 
 .header-nav {
   padding: 0.5em 0;
@@ -435,9 +421,9 @@ nav .fly-item {
   z-index: 1;
 }
 
-/* 01. HEADER 
-*    c.Header Main, Departaments Category
-*/
+/* 01.HEADER 
+ *  c.Header Main, Departaments Category
+ */
 
 .header-main {
   background-color: var(--secondary-dark-color);
@@ -486,9 +472,9 @@ nav .fly-item {
   text-decoration: underline;
 }
 
-/* HEADER
-    d. Search form
-*/
+/* 01.HEADER
+ *  d. Search form
+ */
 
 .header-main .right {
   flex: 1;
@@ -535,9 +521,9 @@ form.search button:hover {
   background-color: var(--dark-color);
 }
 
-/* 01. HEADER
-    e. Responsive MENU - Off Canvas
-*/
+/* 01.HEADER
+ *   e.Responsive MENU - Off Canvas
+ */
 
 .site-off {
   position: fixed;
@@ -726,7 +712,7 @@ form.search button:hover {
   background-color: var(--secondary-dark-color);
 }
 
-/* 03. BRANDS */
+/* 03.BRANDS */
 
 .brands .wrapper {
   justify-content: space-between;
@@ -743,7 +729,7 @@ form.search button:hover {
   opacity: 1;
 }
 
-/* 04. Product Block Style */
+/* 04.Product*/
 
 .sectop {
   justify-content: space-between;
@@ -766,8 +752,8 @@ form.search button:hover {
 }
 
 /* 04.Product --------------------------
-    a. Global Product
-  */
+ *  a.Global Product
+*/
 
 .products .offer {
   text-align: center;
@@ -966,8 +952,8 @@ form.search button:hover {
 }
 
 /* 04.Product --------------------------
-    b. BIG Product
-*/
+ *   b.BIG Product
+ */
 
 .products.big .item {
   flex-direction: column;
@@ -979,8 +965,8 @@ form.search button:hover {
 }
 
 /* 04.Product --------------------------
-    c. Mini product 
-*/
+ *  c. Mini product 
+ */
 
 .products.mini .item {
   margin-bottom: 2em;
@@ -1000,8 +986,8 @@ form.search button:hover {
 
 
 /* 04.Product --------------------------
-    d. Main Product    
-*/
+ *    d. Main Product    
+ */
 
 .products.main .item{
   flex-direction: column;
@@ -1147,7 +1133,7 @@ form.search button:hover {
   }
 
   /* 06.FOOTER
-   * b. widgets
+   * b.widgets
   */
 
   .widgets {
@@ -1155,8 +1141,8 @@ form.search button:hover {
     background-color: var(--light-bg-color);
    } 
 
-   /* 06. FOOTER
-    * c. Info
+   /* 06.FOOTER
+    * c.Info
     */
 
     .footer-info {
@@ -1196,7 +1182,104 @@ form.search button:hover {
       
     }
 
-/* 15.RESPONSIVE */
+    /* 07.BOTTOM MENU
+     * 
+    */
+
+    .menu-bottom{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+      background-color: var(--white-color);
+      box-shadow: 0 -2px 10px rgb(0, 0, 0 / 10%);
+      z-index: 900;
+    }
+
+    .menu-bottom nav li {
+      flex: 1;
+
+    }
+    .menu-bottom nav li a{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5em 0;
+      color: var(--light-text-color);
+      transition: var(--trans-color);
+    }
+
+    .menu-bottom nav li a:hover {
+      color: var(--dark-color);
+    }
+
+    .menu-bottom nav li a span {
+      font-size: var(--font-smaller);
+
+    }
+    .menu-bottom nav li a i {
+      font-size: 1.25em;
+    }
+
+    .menu-bottom .fly-item {
+      right: 50%;
+      width: 16px;
+      border-radius: var(--percent50);
+      margin-right: -20px;
+      background-color: var(--secondary-dark-color);
+    }
+
+
+    /* 07.BOTTOM MENU
+     * a.Search 
+     */
+    .search-bottom{
+      position: fixed;
+      bottom: 60px;
+      width: var(--percent100);
+      padding: 2.5em 0 ;
+      background-color: var(--secondary-dark-color);
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      will-change: visibility, opacity;
+    }
+
+    .showsearch .search-bottom{
+      visibility: inherit;
+      opacity: 1;
+    }
+    .search-bottom .t-close{
+      position: absolute;
+      top: -54px;
+      right: 0;
+    }
+    .search-bottom .t-close:hover{
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    /* 08.OVERLAY */
+    .overlay{
+      position: fixed;
+      width: var(--percent100);
+      height:var(var(--percent100));
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background-color: rgba(0,0,0,0.4);
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    /* .showmenu .overlay{
+
+    } */
+
+
+/* 09.RESPONSIVE */
 
 @media  screen and (min-width: 481px) {
 
